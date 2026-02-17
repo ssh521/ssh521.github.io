@@ -1,37 +1,29 @@
 ---
 author: ssh521
 categories:
-- Development
-- Blog
+  - Development
+  - Blog
 date: 2026-02-18
-description: Obsidian과 Quartz를 활용하여 GitHub Pages에 무료로
-  웹사이트를 구축하고 자동 배포하는 전체 과정을 단계별로 정리한 가이드.
+description: Obsidian과 Quartz를 활용하여 GitHub Pages에 무료로 웹사이트를 구축하고 자동 배포하는 전체 과정을 단계별로 정리한 가이드.
 tags:
-- Obsidian
-- Quartz
-- GitHub Pages
-- 정적사이트
-- 블로그
-title: Obsidian으로 무료 웹사이트 만들기 (GitHub Pages + Quartz 완전
-  가이드)
+  - Obsidian
+  - Quartz
+  - GitHubPages
+  - 정적사이트
+  - 블로그
+title: Obsidian으로 무료 웹사이트 만들기 (GitHub Pages + Quartz 완전 가이드)
 ---
 
 # Obsidian으로 무료 웹사이트 만들기
 
 ## GitHub Pages + Quartz 자동 배포 완전 가이드
 
-GitHub 계정만 있다면 누구나 무료로 웹사이트를 만들 수 있다.\
-Obsidian으로 글을 작성하고, Quartz로 정적 사이트를 생성한 뒤, GitHub
-Pages로 자동 배포하는 전체 과정을 정리한다.
+GitHub 계정만 있다면 누구나 무료로 웹사이트를 만들 수 있다. 
+Obsidian으로 글을 작성하고, Quartz로 정적 사이트를 생성한 뒤, GitHub Pages로 자동 배포하는 전체 과정을 정리한다.
 
 ------------------------------------------------------------------------
 
-## 대표 이미지
-
-![Obsidian Quartz GitHub Pages](./content/attachments/cover-image.png)
-
-> 위 이미지는 예시이다. 실제 블로그에서는 `content/attachments` 폴더에
-> 이미지를 저장하고 상대경로로 연결한다.
+![[ChatGPT Image 2026년 2월 18일 오전 01_34_06.png]]
 
 ------------------------------------------------------------------------
 
@@ -39,9 +31,9 @@ Pages로 자동 배포하는 전체 과정을 정리한다.
 
 다음 네 가지가 필요하다.
 
-1.  GitHub 계정\
-2.  Node.js (LTS 권장)\
-3.  Git\
+1.  GitHub 계정
+2.  Node.js (LTS 권장)
+3.  Git
 4.  Obsidian
 
 GitHub Pages는 무료 호스팅을 제공한다.
@@ -100,8 +92,8 @@ Obsidian에서 작성한 글이 자동으로 웹사이트에 반영되도록 연
 
     ln -s ~/Documents/GitHub/ssh521.github.io/content       ~/Documents/ObsidianVault/content
 
-이제 Obsidian에서 `content` 폴더 안에 글을 작성하면 실제 웹사이트
-프로젝트에 저장된다.
+이제 Obsidian에서 `content` 폴더 안에 글을 작성하면 실제 웹사이트 프로젝트에 저장된다.
+이 방식은 GitHub Actions 환경과 충돌하지 않으며 가장 안정적이다.
 
 ------------------------------------------------------------------------
 
