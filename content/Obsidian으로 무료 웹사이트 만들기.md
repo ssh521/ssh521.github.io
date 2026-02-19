@@ -91,7 +91,7 @@ https://github.com/jackyzha0/quartz
 Obsidian에서 작성한 글이 자동으로 웹사이트에 반영되도록 연결한다.
 
     ln -s ~/Documents/GitHub/ssh521.github.io/content
-		   ~/Documents/ObsidianVault/content
+		   ~/Documents/ObsidianVault/ssh521.github.io/content
 
 이제 Obsidian에서 `content` 폴더 안에 글을 작성하면 실제 웹사이트 프로젝트에 저장된다.
 이 방식은 GitHub Actions 환경과 충돌하지 않으며 가장 안정적이다.
