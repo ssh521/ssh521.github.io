@@ -1,9 +1,9 @@
 ---
 author: ssh521
+title: Obsidian으로 무료 웹사이트 만들기
 categories:
   - Development
   - Blog
-date: 2026-02-18
 description: Obsidian과 Quartz를 활용하여 GitHub Pages에 무료로 웹사이트를 구축하고 자동 배포하는 전체 과정을 단계별로 정리한 가이드.
 tags:
   - Obsidian
@@ -11,7 +11,7 @@ tags:
   - GitHubPages
   - 정적사이트
   - 블로그
-title: Obsidian으로 무료 웹사이트 만들기 (GitHub Pages + Quartz 완전 가이드)
+date: 2026-02-18
 ---
 
 # Obsidian으로 무료 웹사이트 만들기
