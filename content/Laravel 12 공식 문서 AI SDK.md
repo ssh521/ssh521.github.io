@@ -1,14 +1,13 @@
 ---
 title: Laravel 12 AI SDK 요약
 description: Laravel 12 공식 문서 AI SDK
+date: 2026-02-19
+tags:
+  - AI_SDK
+  - Laravel
 ---
-
-# Laravel AI SDK
-
-## 핵심 포인트 한줄 요약
-Laravel 12에서 제공하는 AI SDK는 통합된 API를 통해 다양한 AI 기능(에이전트, 이미지, 오디오, 임베딩 등)을 Laravel 친화적인 방식으로 쉽게 구현하도록 해준다.
-
-## 문서 요약
+> [!INFO]
+> Laravel 12에서 제공하는 AI SDK는 통합된 API를 통해 다양한 AI 기능(에이전트, 이미지, 오디오, 임베딩 등)을 Laravel 친화적인 방식으로 쉽게 구현하도록 해준다.
 
 ### 소개
 Laravel AI SDK는 OpenAI, Anthropic, Gemini 등 다양한 AI 공급자와 상호작용할 수 있는 **일관된 API**를 제공한다. 이를 통해 **지능형 에이전트, 이미지 생성, 오디오 합성·전사, 벡터 임베딩 생성** 등을 Laravel 애플리케이션에서 손쉽게 구현할 수 있다.
@@ -41,5 +40,5 @@ AI SDK는 텍스트 뿐 아니라 **이미지 생성, 음성 합성(TTS), 음성
 ### 제공자 지원 및 확장성
 여러 AI 제공자를 설정할 수 있고, **기본 베이스 URL 변경** 또는 프록시 서비스 이용도 가능하다.
 
-## 키워드 해시태그
+
 #Laravel #AI_SDK #AI_통합 #에이전트 #이미지생성 #오디오 #임베딩 #구조화된출력 #멀티모달
