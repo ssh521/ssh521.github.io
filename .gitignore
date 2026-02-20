@@ -1,7 +1,4 @@
 node_modules
-<<<<<<< Updated upstream
-/public
-quartz/.quartz-cache
-=======
 public
->>>>>>> Stashed changes
+quartz/.quartz-cache
+.DS_Store
