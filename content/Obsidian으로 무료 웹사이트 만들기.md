@@ -14,20 +14,15 @@ tags:
 date: 2026-02-18
 ---
 
-# Obsidian으로 무료 웹사이트 만들기
-
-## GitHub Pages + Quartz 자동 배포 완전 가이드
-
-GitHub 계정만 있다면 누구나 무료로 웹사이트를 만들 수 있다. 
-Obsidian으로 글을 작성하고, Quartz로 정적 사이트를 생성한 뒤, GitHub Pages로 자동 배포하는 전체 과정을 정리한다.
-
-------------------------------------------------------------------------
-
 ![[ChatGPT Image 2026년 2월 18일 오전 01_34_06.png]]
+# GitHub Pages + Quartz 자동 배포 완전 가이드
 
-------------------------------------------------------------------------
+> [!note] 
+> GitHub 계정만 있다면 누구나 무료로 웹사이트를 만들 수 있다.  
+> Obsidian으로 글을 작성하고, Quartz로 정적 사이트를 생성한 뒤, GitHub Pages로 자동 배포하는 전체 과정을 정리한다.
 
-# 1. 준비물
+
+## 1. 준비물
 
 다음 네 가지가 필요하다.
 
@@ -40,7 +35,7 @@ GitHub Pages는 무료 호스팅을 제공한다.
 
 ------------------------------------------------------------------------
 
-# 2. GitHub Pages용 저장소 생성
+## 2. GitHub Pages용 저장소 생성
 
 루트 도메인으로 배포하려면 저장소 이름은 반드시 다음 형식이어야 한다.
 
@@ -58,7 +53,7 @@ GitHub Pages는 무료 호스팅을 제공한다.
 
 ------------------------------------------------------------------------
 
-# 3. 저장소를 로컬에 클론
+## 3. 저장소를 로컬에 클론
 
     git clone git@github.com:ssh521/ssh521.github.io.git
     cd ssh521.github.io
@@ -67,7 +62,7 @@ GitHub Pages는 무료 호스팅을 제공한다.
 
 ------------------------------------------------------------------------
 
-# 4. Quartz 설치 (GitHub 공식 저장소 이용)
+## 4. Quartz 설치 (GitHub 공식 저장소 이용)
 
 공식 저장소:
 
@@ -83,22 +78,32 @@ https://github.com/jackyzha0/quartz
     content/
     package.json
     quartz.config.ts
+    ...
 
 ------------------------------------------------------------------------
 
-# 5. Obsidian과 content 폴더 연결
+## 5. Obsidian과 content 폴더 연결
 
-Obsidian에서 작성한 글이 자동으로 웹사이트에 반영되도록 연결한다.
+Obsidian에서 작성한 글이 자동으로 웹사이트에 반영되도록 연결한다.  
+> 원본은 ssh521.github.io/content  
+> 심볼릭 링크는 ObsidianVaults/ssh521.github.io/content 가 된다.
 
-    ln -s ~/Documents/GitHub/ssh521.github.io/content
-		   ~/Documents/ObsidianVault/ssh521.github.io/content
+```
+ln -s ~/Github/ssh521.github.io/content \
+~/Github/ObsidianVaults/ssh521.github.io/content
+```
 
-이제 Obsidian에서 `content` 폴더 안에 글을 작성하면 실제 웹사이트 프로젝트에 저장된다.
-이 방식은 GitHub Actions 환경과 충돌하지 않으며 가장 안정적이다.
+이제 Obsidian에서 ObsidianVaults/ssh521.github.io 폴더를 오픈하고 `content` 폴더 안에 글을 작성하면 실제 웹사이트 프로젝트에 저장된다. 
+이 방식은 GitHub Actions 환경과 충돌하지 않으며 가장 안정적이다.  
+
+ObsidianVaults 또한 github 로 동기화해서 사용하고 content 폴더가 있는 폴더는 .gitignore 에서 제외시킨다.  
+.gitignore 에 .obsidian 을 추가해서 제외시키고 단순 컨텐츠만 동기화 시키도록 한다.  
+필요한 plugin 이나 테마는 각자 pc 에서 다시 세팅하도록 해야 충돌을 방지 할 수 있다.  
+또한 첨부파일은 content 폴더 안에 attachments 폴더를 만들어서 추가한다.
 
 ------------------------------------------------------------------------
 
-# 6. 로컬 빌드 테스트
+## 6. 로컬 빌드 테스트
 
     npx quartz build
 
@@ -108,7 +113,7 @@ Obsidian에서 작성한 글이 자동으로 웹사이트에 반영되도록 연
 
 ------------------------------------------------------------------------
 
-# 7. GitHub Pages 설정
+## 7. GitHub Pages 설정
 
 GitHub → ssh521.github.io → Settings → Pages
 
@@ -118,7 +123,7 @@ GitHub → ssh521.github.io → Settings → Pages
 
 ------------------------------------------------------------------------
 
-# 8. GitHub Actions 자동 배포 설정
+## 8. GitHub Actions 자동 배포 설정
 
 경로:
 
@@ -161,7 +166,7 @@ jobs:
 
 ------------------------------------------------------------------------
 
-# 9. 글 작성 → 자동 배포 흐름
+## 9. 글 작성 → 자동 배포 흐름
 
     git add .
     git commit -m "new post"
@@ -176,13 +181,13 @@ jobs:
 
 ------------------------------------------------------------------------
 
-# 전체 아키텍처 요약
+## 전체 아키텍처 요약
 
     Obsidian → content → Quartz → GitHub Actions → GitHub Pages
 
 ------------------------------------------------------------------------
 
-# 마무리
+## 마무리
 
 이 구조는 다음과 같은 장점이 있다.
 
