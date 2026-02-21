@@ -256,11 +256,12 @@ a {
         position: initial;
         height: unset;
         width: 100%;
-        flex-direction: row;
+        flex-direction: column;
         padding: 0;
         & > * {
-          flex: 1;
-          max-height: 24rem;
+          flex: none;
+          min-height: 0;
+          max-height: none;
         }
         & > .toc {
           display: none;
