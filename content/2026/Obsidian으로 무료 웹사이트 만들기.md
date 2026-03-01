@@ -1,6 +1,6 @@
 ---
 author: ssh521
-title: Obsidian으로 무료 웹사이트 만들기
+title: Obsidian+GitHub 무료 웹사이트 만들기
 categories:
   - Development
   - Blog
