@@ -3,7 +3,6 @@ title: Laravel 12 AI SDK 요약
 description: Laravel 12 공식 문서 AI SDK
 date: 2026-02-19
 tags:
-  - AI_SDK
   - Laravel
 ---
 > [!INFO]
@@ -41,4 +40,4 @@ AI SDK는 텍스트 뿐 아니라 **이미지 생성, 음성 합성(TTS), 음성
 여러 AI 제공자를 설정할 수 있고, **기본 베이스 URL 변경** 또는 프록시 서비스 이용도 가능하다.
 
 
-#Laravel #AI_SDK #AI_통합 #에이전트 #이미지생성 #오디오 #임베딩 #구조화된출력 #멀티모달
+#Laravel
